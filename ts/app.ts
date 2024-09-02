@@ -1,3 +1,4 @@
+
 interface SelectEvent extends Event {
   target: HTMLSelectElement;
 }
@@ -5,9 +6,10 @@ interface Translations {
   greeting: Record<string, string>;
   body: Record<string, string>;
 }
-fetch('./translation/languages.json')
+fetch('translation/languages.json')
   .then((response: Response) => response.json())
   .then((translations: Translations) => {
+
     function updateFormLanguage(language: string): void {
       const greetingElement = document.getElementById('greeting');
       const bodyElement = document.getElementById('body');
